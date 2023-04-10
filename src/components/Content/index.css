@@ -1,0 +1,5 @@
+.container-content {
+    background-color: azure;
+    display: flex;
+    flex: 5;
+}
