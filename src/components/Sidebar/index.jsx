@@ -5,7 +5,7 @@ export default function Sidebar() {
         <div className='container-sidebar'>
             <div class="radio-inputs-action">
                 <label class="radio-action">
-                <input type="radio" name="radio-action"/>
+                <input type="radio" name="radio-action" checked={true}/>
                 <span class="name">Salvar</span>
                 </label>
                     

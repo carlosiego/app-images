@@ -6,7 +6,13 @@ const createWindow = () => {
         height: 600,
         resizable: false,
         icon: `./public/img/logo.png`,
-        
+        titleBarStyle: 'hidden',
+        titleBarOverlay: {
+            color: '#02111B',
+            symbolColor: '#119DA4',
+            height: 30
+        }
+    
     })
 
     win.loadURL('http://localhost:7007')

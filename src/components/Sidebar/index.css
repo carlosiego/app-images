@@ -1,6 +1,8 @@
 .container-sidebar {
     flex: 1;
-    background-color: #e7e7e7;
+    background-color: #dbdbdb;
+    border: 1px solid rgba(0, 0, 0, 0.082);
+
 }
 
 .radio-inputs-action {
@@ -9,7 +11,6 @@
     flex-direction: column;
     border-radius: 0.5rem;
     box-sizing: border-box;
-    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
     padding: 0.25rem;
     font-size: 16px;
     height: 40px;
@@ -34,9 +35,12 @@
     padding: .5rem 0;
     color: rgba(51, 65, 85, 1);
     transition: all .15s ease-in-out;
+    font-weight: 500;
   }
   
   .radio-inputs-action .radio-action input:checked + .name {
-    background-color: #fff;
+    box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+    color: white;
+    background-color: #119DA4;
     font-weight: 600;
   }
