@@ -1,10 +1,11 @@
 import './index.css'
 
-export default function PostLocations() {
+export default function GetProducts() {
 
     return(
-        <div>
-            <p>GETTT PRODUCTSSSSSSSSSSSSSSSSSSSSSSSSSSSS</p>
+        <div className='container-products'>
+            <label for='codePostProductss'>Código: </label>
+            <input type='number' id='codePostProducts'></input>
         </div>
     )
 }

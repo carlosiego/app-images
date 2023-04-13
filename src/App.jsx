@@ -74,8 +74,10 @@ function App() {
             </div>
         </div>
         <Content>
+        
           {
             field === 'products' ? 
+            
             action === 'post' ? <PostProducts /> :
             action === 'get' ? <GetProducts /> :
             action === 'put' ? <PutProducts/> : 
@@ -86,6 +88,7 @@ function App() {
             action === 'put' ? <PutLocations /> : 
             action === 'delete' ? <DeleteLocations /> : ''
           }
+
         </Content>
       </div>
     </div>

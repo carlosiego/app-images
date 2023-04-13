@@ -1,0 +1,158 @@
+
+
+.iconLoad {
+    width: 2.25em;
+    transform-origin: center;
+    animation: rotate4 2s linear infinite;
+   }
+   
+   circle {
+    fill: none;
+    stroke: hsl(214, 97%, 59%);
+    stroke-width: 2;
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: dash4 1.5s ease-in-out infinite;
+   }
+   
+   @keyframes rotate4 {
+    100% {
+     transform: rotate(360deg);
+    }
+   }
+   
+   @keyframes dash4 {
+    0% {
+     stroke-dasharray: 1, 200;
+     stroke-dashoffset: 0;
+    }
+   
+    50% {
+     stroke-dasharray: 90, 200;
+     stroke-dashoffset: -35px;
+    }
+   
+    100% {
+     stroke-dashoffset: -125px;
+    }
+   }
+
+   .download-button {
+    position: relative;
+    border-width: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 1;
+   }
+   
+   .download-button .docs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 40px;
+    padding: 0 10px;
+    border-radius: 4px;
+    z-index: 1;
+    background-color: #02111B;
+    border: solid 1px #e8e8e82d;
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+   }
+   
+   .download-button:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   }
+   
+   .download {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 0 auto;
+    z-index: -1;
+    border-radius: 4px;
+    transform: translateY(0%);
+    background-color: #01e056;
+    border: solid 1px #01e0572d;
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+   }
+   
+   .download-button:hover .download {
+    transform: translateY(100%)
+   }
+   
+   .download svg polyline,.download svg line {
+    animation: docs 1s infinite;
+   }
+   
+   @keyframes docs {
+    0% {
+     transform: translateY(0%);
+    }
+   
+    50% {
+     transform: translateY(-15%);
+    }
+   
+    100% {
+     transform: translateY(0%);
+    }
+   }
+
+
+/* ======================================================================================================= */
+
+
+.form {
+    background-color: #fff;
+    box-shadow: 0 10px 60px rgb(218, 229, 255);
+    border: 1px solid rgb(159, 159, 160);
+    border-radius: 20px;
+    padding: 2rem .7rem .7rem .7rem;
+    text-align: center;
+    font-size: 1.125rem;
+  }
+
+  
+  .form-paragraph {
+    margin-top: 10px;
+    font-size: 0.9375rem;
+    color: rgb(105, 105, 105);
+  }
+
+  
+  .drop-title {
+    color: #02111B;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+  }
+  
+  #file-input {
+    width: 340px;
+    max-width: 100%;
+    color: #444;
+    padding: 2px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #02111b80;
+  }
+  
+  #file-input::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #119DA4;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+  }
+  
