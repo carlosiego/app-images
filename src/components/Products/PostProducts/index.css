@@ -1,5 +1,3 @@
-
-
 .iconLoad {
     width: 2.25em;
     transform-origin: center;
@@ -135,7 +133,7 @@
     transition: color .2s ease-in-out;
   }
   
-  #file-input {
+  .input-upload-products {
     width: 340px;
     max-width: 100%;
     color: #444;
@@ -145,7 +143,7 @@
     border: 1px solid #02111b80;
   }
   
-  #file-input::file-selector-button {
+  .input-upload-products::file-selector-button {
     margin-right: 20px;
     border: none;
     background: #119DA4;
