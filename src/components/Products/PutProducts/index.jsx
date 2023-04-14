@@ -1,11 +1,73 @@
 import './index.css'
+import { useState } from 'react'
 
 export default function PutProducts(){
+
+
+    const [ codeCurrent, setCodeCurrent ] = useState('')
+    const [ newCode, setNewCodigo ] = useState('')
+    const [ newUrl, setNewUrl ] = useState('')
+    const [ status, setStatus ] = useState('')
+    const [ colorStatus, setColorStatus ] = useState('')
+
+    const updateImage = async e => {
+        e.preventDefault()
+        setStatus(
+            <svg className='iconLoad' viewBox="25 25 50 50">
+                <circle r="20" cy="50" cx="50"></circle>
+            </svg>
+        )
+        await fetch(`${import.meta.env.VITE_API_BASE_URL}/images/products/code/${codeCurrent}`,
+        {
+            method: "PUT",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify({
+                code: newCode,
+                video: newUrl 
+            })
+        })
+        .then(res => res.json())
+        .then(resJson => {
+            setStatus(resJson.mensagem)
+            if(resJson.erro){
+                setColorStatus('#BF211E')
+            }
+            else{
+                setColorStatus('#119DA4')
+            }
+        }) 
+        .catch(err => {
+            console.log(err)
+        })
+    }
+
+
     return(
-        <div>
-            <p>
-                PUT PRODUCTSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
-            </p>
-        </div>
+
+        <>
+            <form onSubmit={updateImage}>
+                <label for="file-input">
+                    <span className="label-prods-put">Código:</span><br/><br/>
+                    <input type="number" onChange={e => setCodeCurrent(e.target.value)} required className="input-prods-put"/>
+                </label><br/><br/>
+                <label for="file-input">
+                    <span className="label-prods-put">Novo Código:</span><br/><br/>
+                    <input type="number" onChange={e => setNewCodigo(e.target.value)} required className="input-prods-put"/>
+                </label><br/><br/>
+                <label for="file-input">
+                    <span className="label-prods-put">Nova Url:</span><br/><br/>
+                    <input type="url" onChange={e => setNewUrl(e.target.value)} className="input-prods-put" id='input-prods-put-url'/>
+                </label><br/>
+                {status && <span style={{color: colorStatus}}>{status}</span>}
+                <button className="btn-submit-put-prods" type="submit">
+                    <div className="text-btn-submit-put-prods">
+                        <svg className="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line y2="13" x2="8" y1="13" x1="16"></line><line y2="17" x2="8" y1="17" x1="16"></line><polyline points="10 9 9 9 8 9"></polyline></svg> 
+                        Ver
+                    </div>
+                </button> 
+            </form>
+        </>
     )
 }
