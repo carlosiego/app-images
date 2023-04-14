@@ -1,0 +1,61 @@
+.container-form-get-prods {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+.label-prods-get {
+    color: #02111B;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+  }
+
+.input-prods-get {
+    width: 140px;
+    max-width: 100%;
+    color: #444;
+    padding: 2px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #02111b80;
+}
+
+.btn-submit-get-prods {
+    width: 93px;
+    position: relative;
+    border-width: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 1;
+   }
+   
+.btn-submit-get-prods .text-btn-submit-get-prods {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 40px;
+    padding: 0 20px;
+    border-radius: 4px;
+    z-index: 1;
+    background-color: #02111B;
+    border: solid 1px #e8e8e82d;
+    transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.btn-submit-get-prods:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.container-result-get-prods {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
