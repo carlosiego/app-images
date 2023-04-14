@@ -1,6 +1,7 @@
 .container-header{
     background-color: #02111B;
     flex: 0.7;
+    min-height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;

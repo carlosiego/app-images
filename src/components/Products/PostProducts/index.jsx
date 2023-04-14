@@ -9,6 +9,7 @@ export default function PostProducts() {
     const [status, setStatus] = useState('')
     const [colorStatus, setColorStatus] = useState('')
     const [preview, setPreview] = useState('')
+
 // ============================= HANDLE CHANGE IMAGE ======================================================================================
 
     const handleChangeImage = e => {
@@ -55,7 +56,7 @@ export default function PostProducts() {
             <span className="label-prods-upload">Imagem:</span><br/><br/>
             <input type="file" onChange={handleChangeImage} required className="input-prods-upload"/>
           </label><br/>
-          <label for="file-input" >
+          <label>
             <span className="label-prods-upload">Url Video:</span><br/><br/>
             <input type="url" onChange={e => setUrlVideo(e.target.value)} className="input-prods-upload"/>
           </label><br/>

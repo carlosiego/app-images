@@ -1,0 +1,41 @@
+.form-upload-locations {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container-preview-upload-locations {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.label-locations-upload {
+    color: #02111B;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    transition: color .2s ease-in-out;
+}
+
+.input-locations-upload {
+    width: 340px;
+    max-width: 100%;
+    color: #444;
+    padding: 2px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #02111b80;
+}
+  
+.input-locations-upload::file-selector-button {
+    margin-right: 20px;
+    border: none;
+    background: #119DA4;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
