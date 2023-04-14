@@ -1,3 +1,27 @@
+.container-upload-products {
+  display: flex;
+  flex: 1;
+}
+
+.container-form-upload-products {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+}
+
+.container-preview-upload-products {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+
+}
+
+.img-preview-upload-products {
+  width: 200px;
+  height: 200px;
+}
+
 .iconLoad {
     width: 2.25em;
     transform-origin: center;
@@ -37,6 +61,7 @@
    }
 
    .download-button {
+    width: 100px;
     position: relative;
     border-width: 0;
     color: white;

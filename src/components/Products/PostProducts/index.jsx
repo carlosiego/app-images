@@ -5,13 +5,24 @@ import api from '../../../config/configApi'
 export default function PostProducts() {
 
     const [image, setImage] = useState("")
-    const [url, setUrl] = useState("")
-    const [msgUpload, setMsgUpload] = useState('')
+    const [urlVideo, setUrlVideo] = useState("")
+    const [status, setStatus] = useState('')
     const [collorMessageUpload, setCollorMessageUpload] = useState('')
+    const [preview, setPreview] = useState('')
+// ============================= HANDLE CHANGE IMAGE ======================================================================================
+
+    const handleChangeImage = e => {
+      setImage(e.target.files[0])
+      setPreview(URL.createObjectURL(e.target.files[0]))
+    }
+
+// ============================= UPLOAD IMAGE ======================================================================================
 
     const uploadImage = async e => {
         e.preventDefault()
-        setMsgUpload(
+
+
+        setStatus(
           <svg className='iconLoad' viewBox="25 25 50 50">
             <circle r="20" cy="50" cx="50"></circle>
           </svg>
@@ -19,7 +30,7 @@ export default function PostProducts() {
         
         const formData = new FormData();
         formData.append('image', image)
-        formData.append('video', url)
+        formData.append('video', urlVideo)
         // multipart/form-data
         const headers = {
           'headers': {
@@ -29,26 +40,27 @@ export default function PostProducts() {
 
         await api.post('/images/products', formData, headers) 
         .then((res) => {
-          setMsgUpload(res.data.mensagem)
+          setStatus(res.data.mensagem)
           setCollorMessageUpload('#119DA4')
         }).catch(err => {
-          setMsgUpload(err.response.data.mensagem)
+          setStatus(err.response.data.mensagem)
           setCollorMessageUpload('#BF211E')
         })
       }
     
 
     return(
-        <form onSubmit={uploadImage}>
+      <div className='container-upload-products'>
+        <form onSubmit={uploadImage} className='container-form-upload-products'>
           <label for="file-input" class="drop-container">
             <span className="drop-title">Imagem:</span><br/><br/>
-            <input type="file" onChange={e => setImage(e.target.files[0])} required className="input-upload-products"/>
-          </label><br/><br/>
+            <input type="file" onChange={handleChangeImage} required className="input-upload-products"/>
+          </label><br/>
           <label for="file-input" class="drop-container">
             <span className="drop-title">Url Video:</span><br/><br/>
-            <input type="url" onChange={e => setUrl(e.target.value)} className="input-upload-products"/>
-          </label><br/><br/>
-          <span style={{ color: collorMessageUpload, fontSize: 17 }}>{msgUpload}</span><br/><br/> 
+            <input type="url" onChange={e => setUrlVideo(e.target.value)} className="input-upload-products"/>
+          </label><br/>
+          <span style={{ color: collorMessageUpload, fontSize: 17 }}>{status}</span><br/><br/> 
           <button class="download-button" type="submit">
             <div class="docs">
               <svg class="css-i6dzq1" stroke-linejoin="round" stroke-linecap="round" fill="none" stroke-width="2" stroke="currentColor" height="20" width="20" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line y2="13" x2="8" y1="13" x1="16"></line><line y2="17" x2="8" y1="17" x1="16"></line><polyline points="10 9 9 9 8 9"></polyline></svg> Enviar</div>
@@ -57,5 +69,9 @@ export default function PostProducts() {
             </div>
           </button> 
         </form>
+        <div className="container-preview-upload-products">
+          {image && <img className='img-preview-upload-products' src={preview}/>}
+        </div>
+      </div>
     )
 }
