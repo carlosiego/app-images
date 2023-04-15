@@ -2,13 +2,13 @@
     display: flex;
     flex: 1;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
 }
 
 .container-preview-upload-locations {
     display: flex;
     flex: 1;
-    flex-direction: column;
+    justify-content: center;
 }
 
 .label-locations-upload {
@@ -17,9 +17,11 @@
     font-weight: bold;
     text-align: center;
     transition: color .2s ease-in-out;
+    margin-bottom: 15px;
 }
 
-.input-locations-upload {
+.input-locations-upload-file {
+    margin-top: 15px;
     width: 340px;
     max-width: 100%;
     color: #444;
@@ -29,7 +31,7 @@
     border: 1px solid #02111b80;
 }
   
-.input-locations-upload::file-selector-button {
+.input-locations-upload-file::file-selector-button {
     margin-right: 20px;
     border: none;
     background: #119DA4;
@@ -38,4 +40,46 @@
     color: #fff;
     cursor: pointer;
     transition: background .2s ease-in-out;
+}
+
+.input-locations-upload {
+    width: 162px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#input-locations-upload-description {
+    width: 340px;
+}
+
+.span-status-upload-locations {
+    display: block;
+    width: 100%;
+}
+
+.btn-submit-upload-locations {
+    width: 93px;
+    display: block;
+    border-width: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-left: -9px;
+}
+   
+.btn-submit-upload-locations .text-btn-submit-upload-locations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 40px;
+    padding: 0 20px;
+    border-radius: 4px;
+    z-index: 1;
+    background-color: #02111B;
+}
+
+.btn-submit-upload-locations .text-btn-submit-upload-locations:hover {
+    cursor: pointer;
+    background-color: #01e056;
 }
