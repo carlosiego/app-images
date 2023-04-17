@@ -43,8 +43,12 @@ export default function PostProducts() {
           setStatus(res.data.mensagem)
           setColorStatus('#119DA4')
         }).catch(err => {
-          setStatus(err.response.data.mensagem)
-          setColorStatus('#BF211E')
+          if(err.response?.data){
+            setStatus(err.response.data.mensagem)
+          }else {
+            setStatus('Erro, servidor offline!')
+          }
+            setColorStatus('#BF211E')
         })
       }
     
