@@ -1,11 +1,3 @@
-.label-prods-put {
-    color: #02111B;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    transition: color .2s ease-in-out;
-}
-
 .input-prods-put {
     width: 140px;
     max-width: 100%;

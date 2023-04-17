@@ -65,3 +65,12 @@
   background-color: #119DA4;
   font-weight: 600;
 }
+
+.label {
+  color: #02111B;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  transition: color .2s ease-in-out;
+  margin-bottom: 15px;
+}

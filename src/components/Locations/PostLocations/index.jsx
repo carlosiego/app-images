@@ -66,31 +66,31 @@ export default function PostLocations() {
         <>
             <form onSubmit={uploadImageLocations} className='form-upload-locations'>
                 <label for="file-input" >
-                    <span className="label-locations-upload">Imagem:</span>
+                    <span className="label">Imagem:</span>
                     <input type="file" onChange={handleChangeImagelocation} required className="input-locations-upload-file" accept="image/png, image/jpg,"/>
                 </label>
                 <label for="storehouse">
-                    <span className='label-locations-upload'>Deposito: </span><br/>
+                    <span className="label">Deposito: </span><br/>
                     <input className="input-locations-upload" type="text" id="storehouse" required onChange={e => setStoreHouse(e.target.value)}/><br/>
                 </label>
                 <label for="street">
-                    <span className='label-locations-upload'>Rua: </span><br/>
+                    <span className="label">Rua: </span><br/>
                     <input className="input-locations-upload" type="number" id="street" onChange={e => setStreet(e.target.value)}/><br/>
                 </label>
                 <label for="side">
-                    <span className='label-locations-upload'>Lado: </span><br/>
+                    <span className="label">Lado: </span><br/>
                     <input className="input-locations-upload" type="text" id="side" onChange={e => setSide(e.target.value)}/><br/>
                 </label>
                 <label for="shelf">
-                    <span className='label-locations-upload'>Prateleira: </span><br/>
+                    <span className="label">Prateleira: </span><br/>
                     <input className="input-locations-upload" type="number" id="shelf" onChange={e => setShelf(e.target.value)}/><br/>
                 </label>
                 <label for="column">
-                    <label className='label-locations-upload'>Coluna: </label><br />
+                    <label className="label">Coluna: </label><br />
                     <input className="input-locations-upload" type="number" name="column" onChange={e => setColumn(e.target.value)}/><br/>
                 </label>
                 <label for="description">
-                    <span className='label-locations-upload'>Descrição: </span><br/>
+                    <span className="label">Descrição: </span><br/>
                     <input id='input-locations-upload-description' type="text" name="description" onChange={e => setDescription(e.target.value)}/><br/>
                 </label>
                 <span className='span-status-upload-locations' style={{ color: colorStatus, fontSize: 17 }}>{status}</span><br/><br/>

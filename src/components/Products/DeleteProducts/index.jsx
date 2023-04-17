@@ -34,7 +34,7 @@ export default function DeleteProducts() {
     return(
         <form onSubmit={deleteImage}>
             <label for="file-input">
-                <span className="label-prods-delete">Código:</span><br/><br/>
+                <span className="label">Código:</span><br/><br/>
                 <input type="number" onChange={e => setImageDelete(e.target.value)} required className="input-prods-delete"/>
             </label><br/><br/>
             {status && <span style={{color: colorStatus}}>{status}</span>}

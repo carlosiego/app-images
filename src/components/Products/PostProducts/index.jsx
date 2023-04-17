@@ -57,11 +57,11 @@ export default function PostProducts() {
       <div className='container-upload-products'>
         <form onSubmit={uploadImage} className='container-form-upload-products'>
           <label for="file-input" >
-            <span className="label-prods-upload">Imagem:</span><br/><br/>
+            <span className="label">Imagem:</span><br/><br/>
             <input type="file" onChange={handleChangeImage} required className="input-prods-upload" accept="image/png, image/jpg, image/jpeg"/>
           </label><br/>
           <label>
-            <span className="label-prods-upload">Url Video:</span><br/><br/>
+            <span className="label">Url Video:</span><br/><br/>
             <input type="url" onChange={e => setUrlVideo(e.target.value)} className="input-prods-upload"/>
           </label><br/>
           <span style={{ color: colorStatus, fontSize: 17 }}>{status}</span><br/>

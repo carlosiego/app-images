@@ -40,7 +40,7 @@ export default function GetProducts() {
         <>
             <form className='container-form-get-prods' onSubmit={getImage}>
                 <label for="file-input">
-                    <span className="label-prods-get">Código:</span><br/><br/>
+                    <span className="label">Código:</span><br/><br/>
                     <input type="number" onChange={e => setCodeProduct(e.target.value)} required className="input-prods-get"/>
                 </label><br/>
                 {status && <span style={{color: '#BF211E', marginBottom: 10}}>{status}</span>}

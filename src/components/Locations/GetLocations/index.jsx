@@ -48,7 +48,7 @@ export default function GetLocations(){
         <>
         <form className='container-form-get-locations' onSubmit={getImage}>
             <label for="file-input">
-                <span className="label-locations-get">Código:</span><br/><br/>
+                <span className="label">Código:</span><br/><br/>
                 <input type="number" onChange={e => setCodelocation(e.target.value)} required className="input-locations-get"/>
             </label><br/>
             {status && <span style={{color: '#BF211E', marginBottom: 10}}>{status}</span>}

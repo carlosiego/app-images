@@ -148,15 +148,6 @@
     font-size: 0.9375rem;
     color: rgb(105, 105, 105);
   }
-
-  
-  .label-prods-upload {
-    color: #02111B;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    transition: color .2s ease-in-out;
-  }
   
   .input-prods-upload {
     width: 340px;

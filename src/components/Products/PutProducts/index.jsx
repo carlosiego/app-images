@@ -50,15 +50,15 @@ export default function PutProducts(){
         <>
             <form onSubmit={updateImage}>
                 <label for="file-input">
-                    <span className="label-prods-put">Código:</span><br/><br/>
+                    <span className="label">Código:</span><br/><br/>
                     <input type="number" onChange={e => setCodeCurrent(e.target.value)} required className="input-prods-put"/>
                 </label><br/><br/>
                 <label for="file-input">
-                    <span className="label-prods-put">Novo Código:</span><br/><br/>
+                    <span className="label">Novo Código:</span><br/><br/>
                     <input type="number" onChange={e => setNewCodigo(e.target.value)} required className="input-prods-put"/>
                 </label><br/><br/>
                 <label for="file-input">
-                    <span className="label-prods-put">Nova Url:</span><br/><br/>
+                    <span className="label">Nova Url:</span><br/><br/>
                     <input type="url" onChange={e => setNewUrl(e.target.value)} className="input-prods-put" id='input-prods-put-url'/>
                 </label><br/>
                 {status && <span style={{color: colorStatus}}>{status}</span>}
