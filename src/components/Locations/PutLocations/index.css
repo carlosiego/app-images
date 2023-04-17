@@ -1,0 +1,47 @@
+.form-update-locations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 50%;
+}
+
+.input-locations-update {
+    width: 140px;
+    max-width: 100%;
+    height: 20px;
+    padding: 2px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #02111b80;
+}
+
+.btn-submit-put-locations {
+    width: 93px;
+    position: relative;
+    border-width: 0;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 1;
+}
+   
+.btn-submit-put-locations .text-btn-submit-put-locations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 40px;
+    padding: 0 20px;
+    border-radius: 4px;
+    background-color: #02111B;
+}
+
+.btn-submit-put-locations .text-btn-submit-put-locations:hover {
+    cursor: pointer;
+    background-color: #01e056;
+}
+
+.span-status {
+    width: 100%;
+}
