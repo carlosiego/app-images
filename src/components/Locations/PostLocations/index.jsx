@@ -52,7 +52,12 @@ export default function PostLocations() {
             setColorStatus('#119DA4')
         })
         .catch(err => {
-            setStatus(err.response.data.mensagem)
+            if(err.response?.data){
+                setStatus(err.response.data.mensagem)
+            }else{
+                setStatus('Erro, servidor offline!')
+                console.log(err)
+            }
             setColorStatus('#BF211E')
         })
     }
