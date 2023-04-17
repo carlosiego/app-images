@@ -29,8 +29,10 @@ export default function GetProducts() {
                 setStatus('')
             }
         })
-        .catch(err => {
-            console.log(err)
+        .catch( () => {
+            setStatus('Erro, servidor offline!')
+            setUrlImage('')
+            setUrlVideo('')
         })
     }
 
