@@ -31,12 +31,7 @@ export default function PutProducts(){
         .then(res => res.json())
         .then(resJson => {
             setStatus(resJson.mensagem)
-            if(resJson.erro){
-                setColorStatus('#BF211E')
-            }
-            else{
-                setColorStatus('#119DA4')
-            }
+            resJson.erro ? setColorStatus('#BF211E') : setColorStatus('#119DA4')
         }) 
         .catch( () => {
             setStatus('Erro, servidor offline!')
@@ -46,7 +41,6 @@ export default function PutProducts(){
 
 
     return(
-
         <>
             <form onSubmit={updateImage}>
                 <label for="file-input">
