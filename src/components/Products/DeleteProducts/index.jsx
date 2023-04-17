@@ -35,11 +35,11 @@ export default function DeleteProducts() {
         <form onSubmit={deleteImage}>
             <label for="file-input">
                 <span className="label">Código:</span><br/><br/>
-                <input type="number" onChange={e => setImageDelete(e.target.value)} required className="input-prods-delete"/>
+                <input type="number" onChange={e => setImageDelete(e.target.value)} required className="input-locations-delete"/>
             </label><br/><br/>
             {status && <span style={{color: colorStatus}}>{status}</span>}
-            <button className="btn-submit-delete-prods" type="submit">
-                <div className="text-btn-submit-delete-prods">
+            <button className="btn-submit-delete-locations" type="submit">
+                <div className="text-btn-submit-delete-locations">
                     Excluir
                 </div>
             </button> 
