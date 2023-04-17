@@ -38,8 +38,9 @@ export default function GetLocations(){
                 setDescription(resJson.image.description)
             }
         })
-        .catch(err => {
-            console.log(err)
+        .catch( () => {
+            setStatus('Erro, servidor offline!')
+            setUrlImage('')
         })
     }
 
