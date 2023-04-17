@@ -38,8 +38,9 @@ export default function PutProducts(){
                 setColorStatus('#119DA4')
             }
         }) 
-        .catch(err => {
-            console.log(err)
+        .catch( () => {
+            setStatus('Erro, servidor offline!')
+            setColorStatus('#BF211E')
         })
     }
 
