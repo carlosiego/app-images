@@ -48,11 +48,11 @@ export default function PostLocations() {
 
         await api.post('/images/locations', formData, headers) 
         .then(res => {
-            setStatus(res.data.mensagem)
+            setStatus(res.data.message)
             setColorStatus('#119DA4')
         })
         .catch(err => {
-            err.response?.data ? setStatus(err.response.data.mensagem) : setStatus('Erro, servidor offline!')
+            err.response?.data ? setStatus(err.response.data.message) : setStatus('Erro, servidor offline!')
             setColorStatus('#BF211E')
         })
     }

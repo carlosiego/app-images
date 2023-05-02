@@ -23,8 +23,8 @@ export default function DeleteLocations() {
         })
         .then(res => res.json())
         .then(resJson => {
-          setStatus(resJson.mensagem)
-          resJson.erro ? setColorStatus('#BF211E') : setColorStatus('#119DA4')
+          setStatus(resJson.message)
+          resJson.error ? setColorStatus('#BF211E') : setColorStatus('#119DA4')
         }).catch(() => {
           setStatus('Erro, servidor offline!')
           setColorStatus('#BF211E')

@@ -24,9 +24,9 @@ export default function GetLocations(){
         await fetch(`${import.meta.env.VITE_API_BASE_URL}/images/locations/code/${codelocation}`)
         .then(res => res.json())
         .then(resJson => {
-            if(resJson.erro){
+            if(resJson.error){
                 setUrlImage('')
-                setStatus(resJson.mensagem)
+                setStatus(resJson.message)
             }else{
                 setUrlImage(resJson.url)
                 setStatus('')

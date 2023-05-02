@@ -19,8 +19,8 @@ export default function GetProducts() {
         await fetch(`${import.meta.env.VITE_API_BASE_URL}/images/products/code/${codeProduct}`)
         .then(res => res.json())
         .then(resJson => {
-            if(resJson.erro){
-                setStatus(resJson.mensagem)
+            if(resJson.error){
+                setStatus(resJson.message)
                 setUrlImage('')
                 setUrlVideo('')
             }else{

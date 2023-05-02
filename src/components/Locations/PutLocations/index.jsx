@@ -15,7 +15,6 @@ export default function PutLocations() {
     const [colorStatus, setColorStatus] = useState('')
 
     const UpdateImageLocation = async e => {
-        console.log(typeof streetUpdate)
         e.preventDefault()
         setStatus(
             <svg className='iconLoad' viewBox="25 25 50 50">
@@ -39,8 +38,8 @@ export default function PutLocations() {
         })
         .then(res => res.json())
         .then(resJson => {
-            setStatus(resJson.mensagem)
-            resJson.erro ? setColorStatus('#BF211E') : setColorStatus('#119DA4')
+            setStatus(resJson.message)
+            resJson.error ? setColorStatus('#BF211E') : setColorStatus('#119DA4')
         })
         .catch(() => {
             setStatus('Erro, servidor offline!')
