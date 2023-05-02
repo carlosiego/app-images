@@ -17,7 +17,7 @@ export default function PutProducts(){
                 <circle r="20" cy="50" cx="50"></circle>
             </svg>
         )
-        await fetch(`${import.meta.env.VITE_API_BASE_URL}/images/products/code/${codeCurrent}`,
+        await fetch(`${import.meta.env.VITE_API_BASE_URL}/${import.meta.env.VITE_SECRET_API}/images/products/code/${codeCurrent}`,
         {
             method: "PUT",
             headers: {

@@ -15,7 +15,7 @@ export default function DeleteProducts() {
         </svg>
       )
 
-      await fetch(`${import.meta.env.VITE_API_BASE_URL}/images/products/code/${imageDelete}`, {
+      await fetch(`${import.meta.env.VITE_API_BASE_URL}/${import.meta.env.VITE_SECRET_API}/images/products/code/${imageDelete}`, {
         method: "DELETE",
         headers: {
           'Content-type': 'application/json'

@@ -38,7 +38,7 @@ export default function PostProducts() {
           }
         }
 
-        await api.post('/images/products', formData, headers) 
+        await api.post(`/${import.meta.env.VITE_SECRET_API}/images/products`, formData, headers) 
         .then((res) => {
           setStatus(res.data.message)
           setColorStatus('#119DA4')

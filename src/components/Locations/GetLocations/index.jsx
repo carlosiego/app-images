@@ -21,7 +21,7 @@ export default function GetLocations(){
                 <circle r="20" cy="50" cx="50"></circle>
             </svg>
         )
-        await fetch(`${import.meta.env.VITE_API_BASE_URL}/images/locations/code/${codelocation}`)
+        await fetch(`${import.meta.env.VITE_API_BASE_URL}/${import.meta.env.VITE_SECRET_API}/images/locations/code/${codelocation}`)
         .then(res => res.json())
         .then(resJson => {
             if(resJson.error){

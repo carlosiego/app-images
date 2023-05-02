@@ -15,7 +15,7 @@ export default function DeleteLocations() {
         </svg>
       )
 
-      await fetch(`${import.meta.env.VITE_API_BASE_URL}/images/locations/code/${imageDelete}`, {
+      await fetch(`${import.meta.env.VITE_API_BASE_URL}/${import.meta.env.VITE_SECRET_API}/images/locations/code/${imageDelete}`, {
         method: "DELETE",
         headers: {
           'Content-type': 'application/json'

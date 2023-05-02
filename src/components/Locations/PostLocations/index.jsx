@@ -46,7 +46,7 @@ export default function PostLocations() {
             },
         }
 
-        await api.post('/images/locations', formData, headers) 
+        await api.post(`/${import.meta.env.VITE_SECRET_API}/images/locations`, formData, headers) 
         .then(res => {
             setStatus(res.data.message)
             setColorStatus('#119DA4')

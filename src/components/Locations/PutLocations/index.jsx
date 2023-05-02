@@ -21,7 +21,7 @@ export default function PutLocations() {
                 <circle r="20" cy="50" cx="50"></circle>
             </svg>
         )
-        await fetch(`http://localhost:3007/images/locations/code/${codeCurrentUpdate}`, {
+        await fetch(`${import.meta.env.VITE_API_BASE_URL}/${import.meta.env.VITE_SECRET_API}/images/locations/code/${codeCurrentUpdate}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
