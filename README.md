@@ -1,0 +1,4 @@
+# envs
+
+VITE_API_BASE_URL
+VITE_SECRET_API
